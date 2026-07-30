@@ -39,23 +39,16 @@ body {
     min-height: 100vh;
     color: var(--cream);
 
-    /*
-       Dark timber background.
-       This is the page background you wanted to keep.
-    */
-    background:
-        linear-gradient(
-            rgba(18, 12, 9, 0.9),
-            rgba(18, 12, 9, 0.94)
-        ),
+    background-color: #7a5538;
+    background-image:
         repeating-linear-gradient(
             90deg,
-            #251812 0,
-            #251812 80px,
-            #2e1e16 81px,
-            #2e1e16 84px,
-            #1d130f 85px,
-            #1d130f 165px
+            rgba(65, 39, 25, 0.18) 0,
+            rgba(65, 39, 25, 0.18) 80px,
+            rgba(110, 76, 49, 0.12) 81px,
+            rgba(110, 76, 49, 0.12) 84px,
+            rgba(54, 32, 21, 0.14) 85px,
+            rgba(54, 32, 21, 0.14) 165px
         );
 
     font-family: "Crimson Text", Georgia, serif;
