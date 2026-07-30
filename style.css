@@ -1018,3 +1018,380 @@ a:focus-visible {
         padding: 38px 24px;
     }
 }
+
+/* ------------------------------
+   Staff Page
+------------------------------ */
+
+.staff-page {
+    padding-bottom: 90px;
+}
+
+/* Staff introduction */
+
+.staff-intro {
+    padding: 80px 20px 60px;
+}
+
+.staff-title-paper {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 55px 60px;
+
+    position: relative;
+
+    color: var(--ink);
+    text-align: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--paper-light),
+            var(--paper)
+        );
+
+    border: 2px solid #5c3b25;
+
+    box-shadow:
+        7px 9px 0 #24140d,
+        0 18px 30px var(--shadow);
+}
+
+.staff-eyebrow {
+    margin-bottom: 10px;
+
+    color: #70452d;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.staff-title-paper h2 {
+    margin-bottom: 20px;
+
+    color: #342015;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.staff-title-paper p:not(.staff-eyebrow) {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #38261b;
+    font-size: 1.15rem;
+}
+
+/* Staff sections */
+
+.staff-section {
+    padding: 45px 20px 65px;
+}
+
+.staff-section-heading {
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.staff-section-heading p {
+    color: var(--muted-cream);
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.staff-section-heading h2 {
+    color: var(--cream);
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+}
+
+/* Staff layouts */
+
+.staff-grid {
+    width: min(950px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    justify-content: center;
+    gap: 55px;
+}
+
+.staff-grid-two {
+    grid-template-columns: repeat(2, minmax(260px, 360px));
+}
+
+.staff-grid-one {
+    grid-template-columns: minmax(260px, 360px);
+}
+
+/* Staff card */
+
+.staff-card {
+    position: relative;
+    padding: 42px 24px 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3b281d 0%,
+            #2a1a13 100%
+        );
+
+    border: 2px solid #765137;
+
+    box-shadow:
+        inset 0 0 0 2px rgba(126, 82, 50, 0.22),
+        7px 9px 0 #160e0a,
+        0 18px 30px var(--shadow);
+}
+
+/* Wooden nameplate */
+
+.staff-nameplate {
+    width: calc(100% - 40px);
+    min-height: 62px;
+
+    position: absolute;
+    top: -31px;
+    left: 20px;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #6d472e 0%,
+            #4a2d1d 55%,
+            #382116 100%
+        );
+
+    border: 2px solid #2a170f;
+
+    box-shadow:
+        inset 0 0 0 2px rgba(194, 139, 88, 0.18),
+        4px 5px 0 #1c100b,
+        0 8px 15px rgba(0, 0, 0, 0.42);
+}
+
+.staff-nameplate::before,
+.staff-nameplate::after {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    position: absolute;
+    top: 50%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d1ab70 0%,
+            #866039 50%,
+            #4d301c 100%
+        );
+
+    transform: translateY(-50%);
+
+    box-shadow:
+        1px 2px 2px rgba(0, 0, 0, 0.55);
+}
+
+.staff-nameplate::before {
+    left: 12px;
+}
+
+.staff-nameplate::after {
+    right: 12px;
+}
+
+.staff-nameplate h3 {
+    color: #f1dfbd;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* Portrait */
+
+.staff-portrait-frame {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #1f140f;
+
+    border: 3px solid #9a6b45;
+
+    box-shadow:
+        inset 0 0 0 3px #382318,
+        0 9px 18px rgba(0, 0, 0, 0.48);
+}
+
+.staff-portrait {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+
+    filter:
+        sepia(0.15)
+        saturate(0.9)
+        contrast(1.05);
+}
+
+/* Role beneath portrait */
+
+.staff-role {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.staff-role span {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    color: #e3be8c;
+
+    border-top: 1px solid #83593b;
+    border-bottom: 1px solid #83593b;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Staff notice */
+
+.staff-notice {
+    padding: 55px 20px 0;
+}
+
+.staff-notice-paper {
+    width: min(820px, 92%);
+    margin: 0 auto;
+    padding: 45px;
+
+    color: var(--ink);
+    text-align: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--paper-light),
+            var(--paper)
+        );
+
+    border: 2px solid #5c3b25;
+
+    box-shadow:
+        7px 9px 0 #24140d,
+        0 18px 30px var(--shadow);
+}
+
+.staff-notice-label {
+    margin-bottom: 8px;
+
+    color: var(--rust);
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.staff-notice-paper h2 {
+    margin-bottom: 15px;
+
+    color: #3b2518;
+
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    text-transform: uppercase;
+}
+
+.staff-notice-paper p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: #3b291d;
+}
+
+/* Staff responsive */
+
+@media (max-width: 760px) {
+    .staff-grid-two {
+        grid-template-columns: minmax(260px, 360px);
+    }
+
+    .staff-grid {
+        width: 100%;
+        gap: 65px;
+    }
+
+    .staff-section {
+        padding: 40px 20px 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .staff-intro {
+        padding: 55px 15px 45px;
+    }
+
+    .staff-title-paper {
+        width: 100%;
+        padding: 50px 25px 38px;
+    }
+
+    .staff-section {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .staff-card {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .staff-notice {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .staff-notice-paper {
+        width: 100%;
+        padding: 38px 24px;
+    }
+}
