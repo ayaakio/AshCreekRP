@@ -286,17 +286,16 @@ nav a.active {
 
     background:
         linear-gradient(
-            180deg,
-            #ead9b8 0%,
-            #dfc89e 48%,
-            #d7c096 100%
+            120deg,
+            var(--paper-light),
+            var(--paper)
         );
 
-    border: 1px solid #7c5d37;
+    border: 2px solid #5c3b25;
 
     box-shadow:
-        0 15px 30px var(--shadow),
-        inset 0 0 28px rgba(70, 42, 20, 0.14);
+        7px 9px 0 #24140d,
+        0 18px 30px var(--shadow);
 }
 
 /* Brass pins on the welcome parchment */
