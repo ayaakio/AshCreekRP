@@ -1,6 +1,6 @@
-/* ------------------------------
+/* ---------------------------------
    Ash Creek RP — Global Styling
------------------------------- */
+--------------------------------- */
 
 :root {
     --ink: #211a15;
@@ -10,16 +10,20 @@
     --light-wood: #765137;
     --leather: #633b27;
     --rust: #813d28;
-    --paper: #d7c096;
-    --paper-light: #ead9b8;
-    --paper-dark: #b99868;
+
+    --paper: #d6bc8e;
+    --paper-light: #dcc49a;
+    --paper-dark: #cfb27f;
+
     --cream: #f1e2c4;
     --muted-cream: #cdbb99;
     --border: #301d14;
     --shadow: rgba(0, 0, 0, 0.55);
 }
 
-/* Reset */
+/* ---------------------------------
+   Reset
+--------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -34,6 +38,11 @@ html {
 body {
     min-height: 100vh;
     color: var(--cream);
+
+    /*
+       Dark timber background.
+       This is the page background you wanted to keep.
+    */
     background:
         linear-gradient(
             rgba(18, 12, 9, 0.9),
@@ -54,12 +63,15 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* ---------------------------------
+   Header
+--------------------------------- */
 
 header {
     width: 100%;
     padding: 30px 8%;
     text-align: center;
+
     background:
         linear-gradient(
             rgba(20, 13, 10, 0.92),
@@ -67,6 +79,7 @@ header {
         );
 
     border-bottom: 5px solid #130c09;
+
     box-shadow:
         0 5px 0 #5b3b28,
         0 12px 24px var(--shadow);
@@ -76,9 +89,10 @@ header {
     color: var(--cream);
     font-family: "Cinzel", Georgia, serif;
     font-size: clamp(2.3rem, 6vw, 5rem);
-    letter-spacing: 0.16em;
     line-height: 1.1;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
+
     text-shadow:
         2px 2px 0 var(--black),
         4px 4px 0 var(--rust);
@@ -91,7 +105,9 @@ header {
     letter-spacing: 0.13em;
 }
 
-/* Navigation */
+/* ---------------------------------
+   Navigation
+--------------------------------- */
 
 nav {
     display: flex;
@@ -104,9 +120,12 @@ nav {
 nav a {
     min-width: 120px;
     padding: 10px 18px;
+
     color: var(--cream);
     background: var(--wood);
+
     border: 2px solid #1c110c;
+
     box-shadow:
         inset 0 0 0 2px #6d4932,
         3px 4px 0 #160e0a;
@@ -117,6 +136,7 @@ nav a {
     letter-spacing: 0.08em;
     text-decoration: none;
     text-transform: uppercase;
+
     transition:
         transform 150ms ease,
         background-color 150ms ease;
@@ -133,7 +153,9 @@ nav a.active {
     background: var(--rust);
 }
 
-/* Hero */
+/* ---------------------------------
+   Hero
+--------------------------------- */
 
 .hero {
     min-height: 620px;
@@ -143,33 +165,37 @@ nav a.active {
     position: relative;
     text-align: center;
 
-    background:
+    /*
+       Warm brown background behind
+       the dark central hero panel.
+    */
     background:
         linear-gradient(
-            rgba(20, 13, 9, 0.55),
-            rgba(18, 11, 8, 0.88)
-        ),
-        radial-gradient(
-            circle at center,
-            rgba(130, 82, 45, 0.25),
-            transparent 65%
+            rgba(211, 182, 132, 0.96),
+            rgba(195, 158, 105, 0.96)
         );
 }
 
 .hero-overlay {
     width: min(850px, 92%);
     padding: 55px 50px;
-    background: rgba(27, 17, 12, 0.88);
+
+    background: rgba(39, 27, 20, 0.97);
+
     border: 3px solid #765137;
     outline: 1px solid #130c08;
+    outline-offset: -9px;
+
     box-shadow:
-        0 0 0 8px rgba(20, 12, 8, 0.5),
+        7px 8px 0 rgba(55, 35, 24, 0.75),
         0 18px 35px var(--shadow);
 }
 
 .hero h2 {
     margin-bottom: 22px;
+
     color: var(--cream);
+
     font-family: "Cinzel", Georgia, serif;
     font-size: clamp(2rem, 5vw, 4.2rem);
     line-height: 1.15;
@@ -180,11 +206,14 @@ nav a.active {
 .hero p {
     max-width: 700px;
     margin: 0 auto;
+
     color: #e5d2af;
     font-size: 1.2rem;
 }
 
-/* Buttons */
+/* ---------------------------------
+   Buttons
+--------------------------------- */
 
 .buttons {
     display: flex;
@@ -197,9 +226,12 @@ nav a.active {
 .btn {
     display: inline-block;
     padding: 12px 24px;
+
     color: #fff1d5;
     background: var(--rust);
+
     border: 2px solid #2b150d;
+
     box-shadow:
         inset 0 0 0 2px #9d5a3d,
         4px 5px 0 #100906;
@@ -210,15 +242,21 @@ nav a.active {
     letter-spacing: 0.08em;
     text-decoration: none;
     text-transform: uppercase;
+
     transition:
         transform 150ms ease,
-        background-color 150ms ease;
+        background-color 150ms ease,
+        box-shadow 150ms ease;
 }
 
 .btn:hover,
 .btn:focus-visible {
     background: #9a4b31;
     transform: translateY(-2px);
+
+    box-shadow:
+        inset 0 0 0 2px #ad684d,
+        4px 7px 0 #100906;
 }
 
 .btn.secondary {
@@ -230,81 +268,116 @@ nav a.active {
     background: var(--light-wood);
 }
 
-/* Shared Sections */
+/* ---------------------------------
+   Shared Section Spacing
+--------------------------------- */
 
 .welcome,
 .notice {
     padding: 80px 20px;
 }
 
+/* ---------------------------------
+   Parchment Panel
+--------------------------------- */
+
 .paper {
     width: min(900px, 92%);
     margin: 0 auto;
-    padding: 50px;
+    padding: 60px 55px;
     position: relative;
-    color: var(--ink);
 
+    color: #2d1d14;
+
+    /*
+       Flatter parchment with much less
+       visible gradient than before.
+    */
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(255, 255, 255, 0.2),
-            transparent 25%
-        ),
         linear-gradient(
-            110deg,
-            var(--paper-light),
-            var(--paper),
-            var(--paper-dark)
+            180deg,
+            #dbc294 0%,
+            #d7bd8d 48%,
+            #d3b884 100%
         );
 
-    border: 1px solid #7c5d37;
+    border: 2px solid #7c5a34;
+
     box-shadow:
-        0 15px 30px var(--shadow),
-        inset 0 0 35px rgba(70, 42, 20, 0.25);
+        0 18px 32px rgba(0, 0, 0, 0.5),
+        inset 0 0 22px rgba(75, 45, 20, 0.1);
 }
+
+/* Brass pins */
 
 .paper::before,
 .paper::after {
     content: "";
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
+
     position: absolute;
-    top: 15px;
+    top: 22px;
+
     border-radius: 50%;
-    background: #6d4b2c;
-    border: 2px solid #3b2617;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d4b47c 0%,
+            #967047 38%,
+            #664426 75%,
+            #3d2818 100%
+        );
+
+    border: 2px solid #5b3d24;
+
+    box-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.55),
+        inset 0 1px 1px rgba(255, 255, 255, 0.35);
 }
 
 .paper::before {
-    left: 15px;
+    left: 22px;
 }
 
 .paper::after {
-    right: 15px;
+    right: 22px;
 }
 
 .paper h2 {
-    margin-bottom: 18px;
-    color: #342015;
+    margin-bottom: 32px;
+
+    color: #382318;
+
     font-family: "Cinzel", Georgia, serif;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: 0.04em;
     text-align: center;
     text-transform: uppercase;
 }
 
 .paper p {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: #3a281c;
+
     white-space: pre-line;
     font-size: 1.15rem;
+    line-height: 1.8;
     text-align: center;
 }
-
-/* Feature Cards */
+/* ---------------------------------
+   Feature Cards
+--------------------------------- */
 
 .features {
     width: min(1200px, 92%);
     margin: 0 auto;
     padding: 10px 0 90px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
@@ -313,16 +386,23 @@ nav a.active {
 .card {
     min-height: 240px;
     padding: 36px 30px;
+
     color: var(--ink);
     text-align: center;
+
+    /*
+       Flatter parchment cards to match
+       the revised welcome panel.
+    */
     background:
         linear-gradient(
-            120deg,
-            var(--paper-light),
-            var(--paper)
+            180deg,
+            #ddc69d 0%,
+            #d5ba8a 100%
         );
 
     border: 2px solid #5c3b25;
+
     box-shadow:
         7px 9px 0 #24140d,
         0 18px 30px var(--shadow);
@@ -330,16 +410,23 @@ nav a.active {
 
 .card h3 {
     margin-bottom: 18px;
+
     color: #43291b;
+
     font-family: "Cinzel", Georgia, serif;
     font-size: 1.25rem;
+    line-height: 1.4;
 }
 
 .card p {
+    color: #332218;
     font-size: 1.05rem;
+    line-height: 1.7;
 }
 
-/* Notice Board */
+/* ---------------------------------
+   Notice Board
+--------------------------------- */
 
 .notice {
     background: rgba(12, 8, 6, 0.32);
@@ -350,18 +437,25 @@ nav a.active {
     max-width: 680px;
     margin: 25px auto 0;
     padding-left: 25px;
+
+    color: #332218;
 }
 
 .notice li {
     margin-bottom: 12px;
+    padding-left: 5px;
 }
 
-/* Footer */
+/* ---------------------------------
+   Footer
+--------------------------------- */
 
 footer {
     padding: 35px 20px;
+
     color: var(--muted-cream);
     text-align: center;
+
     background: #120c09;
     border-top: 5px solid #4a3021;
 }
@@ -371,19 +465,23 @@ footer p + p {
     font-style: italic;
 }
 
-/* Keyboard Accessibility */
+/* ---------------------------------
+   Accessibility
+--------------------------------- */
 
 a:focus-visible {
     outline: 3px solid var(--paper-light);
     outline-offset: 4px;
 }
 
-/* Responsive */
+/* ---------------------------------
+   Tablet Layout
+--------------------------------- */
 
 @media (max-width: 850px) {
     .features {
-        grid-template-columns: 1fr;
         max-width: 650px;
+        grid-template-columns: 1fr;
     }
 
     .hero {
@@ -395,17 +493,29 @@ a:focus-visible {
     }
 
     .paper {
-        padding: 45px 28px;
+        padding: 50px 32px;
     }
 }
 
+/* ---------------------------------
+   Mobile Layout
+--------------------------------- */
+
 @media (max-width: 550px) {
+    body {
+        font-size: 17px;
+    }
+
     header {
         padding: 25px 15px;
     }
 
     .logo h1 {
         letter-spacing: 0.08em;
+    }
+
+    .logo p {
+        letter-spacing: 0.06em;
     }
 
     nav {
@@ -428,6 +538,15 @@ a:focus-visible {
         padding: 38px 20px;
     }
 
+    .hero h2 {
+        font-size: clamp(2rem, 12vw, 3rem);
+        letter-spacing: 0.04em;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
     .buttons {
         flex-direction: column;
         align-items: center;
@@ -440,5 +559,58 @@ a:focus-visible {
     .welcome,
     .notice {
         padding: 55px 15px;
+    }
+
+    .paper {
+        width: 100%;
+        padding: 52px 24px 42px;
+    }
+
+    .paper::before,
+    .paper::after {
+        top: 17px;
+    }
+
+    .paper::before {
+        left: 17px;
+    }
+
+    .paper::after {
+        right: 17px;
+    }
+
+    .paper h2 {
+        margin-bottom: 24px;
+    }
+
+    .paper p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .features {
+        width: calc(100% - 30px);
+        gap: 24px;
+        padding-bottom: 60px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 32px 24px;
+    }
+}
+
+/* ---------------------------------
+   Reduced Motion
+--------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    nav a,
+    .btn {
+        transition: none;
     }
 }
