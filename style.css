@@ -144,12 +144,17 @@ nav a.active {
     text-align: center;
 
     background:
-linear-gradient(
-    180deg,
-    #d9c29b 0%,
-    #d3ba91 40%,
-    #ccb081 100%
-);
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(255,255,255,.2),
+        transparent 25%
+    ),
+    linear-gradient(
+        110deg,
+        var(--paper-light),
+        var(--paper),
+        var(--paper-dark)
+    );
 }
 
 .hero-overlay {
